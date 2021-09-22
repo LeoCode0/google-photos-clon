@@ -6,16 +6,6 @@ steps:
       - "docker pull gcr.io/calcium-vector-326722/webapp:latest || exit 0"
   - name: "gcr.io/cloud-builders/docker"
     args:
-      - "build"
-      - "-t"
-      - "gcr.io/calcium-vector-326722/webapp:latest"
-      - "-t"
-      - "gcr.io/calcium-vector-326722/webapp:$COMMIT_SHA"
-      - "--cache-from"
-      - "gcr.io/calcium-vector-326722/webapp:latest"
-      - "."
-  - name: "gcr.io/cloud-builders/docker"
-    args:
       - "push"
       - "gcr.io/calcium-vector-326722/webapp"
   - name: "gcr.io/cloud-builders/gcloud"
