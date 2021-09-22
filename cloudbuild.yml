@@ -1,0 +1,3 @@
+steps:
+  - name: python
+    args: ["python3", "app/main.py"]
